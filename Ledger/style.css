@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  /* การทำให้แสงเงาตรงกล่องdiv */
+  --box-shadow: 0px 2px 3px black;
+}
+body {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  margin: 30px auto;
+  width: 450px;
+}
+h1 {
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+h3 {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin: 40px 0 10px;
+}
+h2 {
+  margin: 0;
+}
+.income-expense-container {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.income {
+  flex: 0.5;
+  text-align: center;
+  border-right: 1px solid black;
+}
+.expense {
+  text-align: center;
+}
+/* ไปทบทวนเรื่อง flex กับ first-of-type */
+#number-income {
+  color: forestgreen;
+}
+#number-expense {
+  color: crimson;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  margin: 5px;
+  background-color: blanchedalmond;
+}
+label {
+  display: inline-block;
+}
+.form-control {
+  padding: 10px 0;
+}
+input {
+  display: block;
+  font-size: 16px;
+  width: 100%;
+}
+.btn {
+  cursor: pointer;
+  font-size: 13px;
+  background-color: cornflowerblue;
+  display: block;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+}
+.delete {
+  background-color: red;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 2px;
+}
+li:hover .delete {
+  opacity: 1;
+}
+li.income {
+  border-left: 20px solid green;
+}
+li.expense {
+  border-left: 20px solid crimson;
+}
