@@ -1,0 +1,162 @@
+:root {
+  --navbar-color: rgba(139, 54, 190, 0.4);
+  --nav-text-color: rgb(44, 1, 60);
+  --text-color: black;
+  --text-color-second: rgba(0, 0, 0, 0.7);
+  --background: #dfdbe5;
+  --box-shadow: 0, 5px, 20px rgba(0, 0, 0, 0.5);
+  --slider-color: rgba(139, 54, 190, 0.4);
+  --slider-round: aliceblue;
+  --facebook-icon: rgb(16, 117, 232);
+}
+/* custom property  */
+[data-theme='dark'] {
+  --navbar-color: rgba(0, 0, 0, 0.5);
+  --nav-text-color: white;
+  --text-color: white;
+  --text-color-second: rgb(211, 179, 233);
+  --background: #252329;
+  --box-shadow: 0, 5px, 20px rgba(0, 0, 0, 0.5);
+  --slider-color: rgba(0, 0, 0, 0.5);
+  --slider-round: aliceblue;
+  --facebook-icon: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23723acd' fill-opacity='0.19'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  margin: 0;
+  color: var(--text-color);
+}
+h3 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+p {
+  color: var(--text-color-second);
+}
+.title-group {
+  text-align: center;
+}
+nav {
+  position: fixed;
+  z-index: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  padding: 25px;
+  width: 100vw;
+  background-color: var(--navbar-color);
+}
+a {
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--nav-text-color);
+  border-bottom: 3px solid transparent;
+}
+a:hover,
+a:focus {
+  color: #dfdbe5;
+  text-decoration: underline;
+}
+.switch-container {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  right: 25px;
+  top: 30px;
+}
+.switch-container span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--text-color);
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider-round {
+  background-color: var(--slider-color);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.4s;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+.slider-round::before {
+  background-color: var(--slider-round);
+  /* ต้องทำการระบุ content เป็นค่าว่างไม่งั้นจะไม่ทำงาน */
+  content: '';
+  bottom: 4px;
+  height: 26px;
+  left: 2px;
+  top: 1px;
+  position: absolute;
+  transition: 0.4s;
+  width: 24px;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+/* input เมื่อมีการติ๊ก จะให้ทำงานร่วมกันกับ .slider-round::before */
+input:checked + .slider-round::before {
+  transform: translateX(26px);
+}
+.fa-sun {
+  font-size: 25px;
+  margin-right: 5px;
+  color: #ea8839;
+}
+.fa-moon {
+  font-size: 25px;
+  margin-right: 5px;
+  color: #f7ef02;
+}
+.fab {
+  font-size: 40px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: var(--facebook-icon);
+}
+.far {
+  font-size: 40px;
+  cursor: pointer;
+  color: (var(--text-color));
+}
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container {
+  border: 2px solid var(--text-color);
+  padding: 10px;
+}
+img {
+  width: 60%;
+  height: 40%;
+}
