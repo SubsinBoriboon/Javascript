@@ -1,0 +1,50 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.start {
+  background-color: cornflowerblue;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.start button,
+.choice button {
+  padding: 10px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  margin: 5px;
+}
+.test {
+  background-color: cornflowerblue;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.score {
+  background-color: cornflowerblue;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.choice {
+  display: flex;
+  flex-direction: column;
+}
